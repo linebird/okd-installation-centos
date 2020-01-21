@@ -65,8 +65,12 @@
 
 ## ***Step 2***
 
-  ***Enable SELINUX=enforcing on all master/worker/infra nodes***
-  
+  ***Enable SELINUX=permissive on all master/worker/infra nodes***
+
+* OKD 설치시 selinux 필수 체크
+* kt cloud에서 생성된 서버는 기본적으로 selinux disable 되어 있음
+* 강제로 selinux 설정을 enforce 할 경우 외부에서 접속 불가 (서버 초기화)
+* permissive 설정시 실제 selinux 가 완전히 활성화 되지는 않지만 OKD 설치는 가능
 * `172.27.0.144 (okd-master-node)`
 * `172.27.0.5 (okd-worker-node-1)`
 
