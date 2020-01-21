@@ -44,8 +44,8 @@ openshift_public_hostname=master-console-${KT_PUBLIC_IP}.nip.io
 osm_use_cockpit=true
 
 # API & Web Console Ports
-openshift_master_api_port=${DOMAIN}
-openshift_master_console_port=${DOMAIN}
+openshift_master_api_port=${API_PORT}
+openshift_master_console_port=${API_PORT}
 
 # Web Console Login Auth Setting
 # htpasswd_auth
