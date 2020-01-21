@@ -12,8 +12,8 @@ envsubst < /root/okd-installation-centos/provisioning/inventory.download > /root
 # checkout openshift-ansible repository
 #[ ! -d openshift-ansible ] && git clone https://github.com/openshift/openshift-ansible.git
 #cd openshift-ansible && git fetch && git checkout release-${OKD_VERSION} && cd ..
-git clone -b release-3.11 --single-branch https://github.com/openshift/openshift-ansible
-cd openshift-ansible
+yum install -y centos-release-openshift-origin311
+yum install -y openshift-ansible
 
 mkdir -p /etc/origin/master/
 touch /etc/origin/master/htpasswd
